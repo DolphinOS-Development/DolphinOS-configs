@@ -1,0 +1,7 @@
+unclutter --display 0:0 --idle 0 --start-hidden --noevents --grab &
+xset -display :0 s off
+xset -display :0 s noblank
+xset -display :0 -dpms
+systemctl --user start pipewire-pulse
+gamemoderun mangohud dolphin-emu -b -n 0000000100000002 
+openbox --exit
