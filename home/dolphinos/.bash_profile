@@ -4,6 +4,7 @@
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
+udiskie -aNT &
 export DISPLAY=:0
 dolphinos-webapp &
 
