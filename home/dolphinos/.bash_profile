@@ -4,6 +4,10 @@
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
-if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
-	startx -- -keeptty -nocursor >~/.xorg.log 2>&1
+udiskie -aNT &
+export DISPLAY=:0
+dolphinos-webapp &
+
+if [ "${XDG_VTNR}" -eq 1 ]; then
+	startx -- -keeptty >~/.xorg.log 2>&1
 fi
